@@ -20,7 +20,7 @@ import  DHT22
 import  Adafruit_DHT
 from    time        import sleep, strftime
 
-PROGRAM_NAME          = "Tech Explorations Bench Controller"
+PROGRAM_NAME          = "Bench Controller"
 IMAGE_FILE_LOCATION   = "../photos"
 VIDEO_FILE_LOCATION   = "../videos"
 DHT_SENSOR_PIN        = 4
@@ -103,7 +103,6 @@ class BenchComputer(Frame):
     style.theme_use("benchComputer")
 
     ##############################################################
-    # You can also customise the theme for each frame, like this:
     # s = Style()
     # s.configure('Tab1.TFrame', background='cyan')
     # s.configure('Tab2.TFrame', background='red')
@@ -373,8 +372,6 @@ class BenchComputer(Frame):
                                           column      = 2)
   # Environment - Tab 3 - methods
   def getDHTreadings(self):
-    # Here is how to implement the sensor so that SUDO is not required
-    # http://www.rototron.info/dht22-tutorial-for-raspberry-pi/
     # This works ok with Python 3
 
     self.sensor.trigger()
